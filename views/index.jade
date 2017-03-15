@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form(class='col-lg-10 form-horizontal', method='post', action='/')
+   if mensaje == null
+    - mensaje = 'Ingrese el valor de T "T representa el numero de veces que ingresara el valor de N y M"';
+   div.col-lg-10
+    label#label(for='text', class='col-lg-10') #{mensaje} 
+    input#text(name='text', required='text', class='col-lg-2 form-control')
+    button#button(type='submit' class='col-lg-2 btn btn-info') Aceptar
+   div.col-lg-10
+    label #{resultado}
